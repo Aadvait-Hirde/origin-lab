@@ -52,7 +52,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-5xl md:text-7xl lg:text-8xl font-light leading-[1.0] text-foreground font-instrument-serif tracking-tight"
+              className="text-5xl md:text-7xl lg:text-7xl font-light leading-[1.0] text-foreground font-instrument-serif tracking-tight"
             >
               Publish your first AI <br />
               research paper in 12 weeks.
@@ -63,7 +63,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed tracking-tighter"
+              className="mt-8 max-w-2xl text-md md:text-lg text-muted-foreground leading-relaxed tracking-tighter"
             >
               Origin Lab is an intensive research program for high school students. 
               Work with university researchers to design, execute, and publish original work by the end of summer.
@@ -97,13 +97,13 @@ export function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-20 w-full max-w-5xl relative mb-[-120px] z-20 pointer-events-none"
+              className="mt-10 w-full max-w-7xl relative mb-[-80px] z-20 pointer-events-none"
             >
               <Image
-                src="/backgrounds/hero-papers.png"
+                src="/assets/hero-papers.png"
                 alt="Research Papers"
-                width={1200}
-                height={800}
+                width={2400}
+                height={1600}
                 className="w-full h-auto drop-shadow-2xl"
                 priority
               />

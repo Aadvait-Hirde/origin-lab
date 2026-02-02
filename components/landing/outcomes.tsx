@@ -48,112 +48,89 @@ export function Outcomes() {
            <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 blur-2xl opacity-50" />
               <motion.div 
-                 initial={{ opacity: 0, scale: 0.95 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
                  transition={{ duration: 0.5 }}
-                 className="relative aspect-[3/4] max-w-md mx-auto bg-white text-zinc-900 shadow-2xl p-8 md:p-10"
+                 className="relative aspect-[1/1.4] max-w-md mx-auto bg-white text-zinc-900 shadow-2xl overflow-hidden"
               >
-                 <div className="h-full border-zinc-100 flex flex-col">
+                 <div className="h-full px-8 py-10 flex flex-col font-serif">
                     {/* Header */}
-                    <div className="mb-8 text-center space-y-3">
-                       <motion.div 
-                          initial={{ width: "0%" }}
-                          whileInView={{ width: "80%" }}
-                          transition={{ duration: 0.8, delay: 0.2 }}
-                          className="h-5 bg-zinc-900 mx-auto" 
-                       />
-                       <motion.div 
-                          initial={{ width: "0%" }}
-                          whileInView={{ width: "60%" }}
-                          transition={{ duration: 0.8, delay: 0.3 }}
-                          className="h-5 bg-zinc-900 mx-auto" 
-                       />
-                       <div className="pt-2 flex justify-center gap-2">
-                           {[1,2,3].map((_, i) => (
-                             <motion.div 
-                               key={i}
-                               initial={{ opacity: 0 }}
-                               whileInView={{ opacity: 1 }}
-                               transition={{ delay: 0.5 + (i*0.1) }}
-                               className="h-2 w-16 bg-zinc-300"
-                             />
-                           ))}
+                    <div className="mb-6 text-center">
+                       <h1 className="text-xl font-bold leading-tight mb-2 font-serif text-black">
+                          Optimizing Transformer Attention Mechanisms for Low-Resource Environments
+                       </h1>
+                       <div className="text-[10px] text-zinc-600 mb-4 font-sans">
+                          Alex Chen, Sarah Williams, and Dr. Emily Zhang
                        </div>
                     </div>
 
                     {/* Columns */}
-                    <div className="grid grid-cols-2 gap-6 flex-1 overflow-hidden">
-                       <div className="space-y-2">
-                          {/* Abstract or content */}
-                          <div className="space-y-1 mb-4">
-                             {[1,2,3,4].map((_, i) => (
-                                <motion.div 
-                                   key={i}
-                                   initial={{ width: 0 }}
-                                   whileInView={{ width: "100%" }}
-                                   transition={{ delay: 0.6 + (i*0.05), duration: 0.4 }}
-                                   className="h-1.5 bg-zinc-300" 
-                                />
-                             ))}
-                          </div>
+                    <div className="flex-1 grid grid-cols-2 gap-6 text-[8px] leading-[1.3] text-justify text-zinc-800">
+                       <div className="space-y-4">
+                          <p>
+                             <strong>Abstract.</strong> Recent advancements in large language models have demonstrated remarkable capabilities across various domains. However, the computational cost of self-attention mechanisms scales quadratically with sequence length, limiting their deployment in resource-constrained environments. In this paper, we propose a novel sparse attention technique that reduces complexity to O(N log N) while maintaining performance on standard benchmarks.
+                          </p>
+                          <p>
+                             <strong>1. Introduction</strong><br/>
+                             The Transformer architecture (Vaswani et al., 2017) has become the de facto standard for natural language processing tasks. Despite its success, the standard self-attention mechanism incurs significant memory and compute overhead. Several efficient attention variants have been proposed, including Reformer, Linformer, and Longformer.
+                          </p>
                           
-                          {/* Figure */}
-                          <motion.div 
-                             initial={{ opacity: 0, y: 10 }}
-                             whileInView={{ opacity: 1, y: 0 }}
-                             transition={{ delay: 0.8 }}
-                             className="h-24 bg-zinc-100 border border-zinc-200 flex items-center justify-center mb-4"
-                          >
-                             <div className="w-8 h-8 rounded-full border-2 border-zinc-300/50" />
-                             <div className="w-8 h-8 rounded-full border-2 border-zinc-300/50 -ml-3" />
-                          </motion.div>
-
-                          {/* More text */}
-                          <div className="space-y-1">
-                             {[1,2,3,4,5,6].map((_, i) => (
-                                <motion.div 
-                                   key={i}
-                                   initial={{ width: 0 }}
-                                   whileInView={{ width: "100%" }}
-                                   transition={{ delay: 1.0 + (i*0.05), duration: 0.4 }}
-                                   className="h-1.5 bg-zinc-300" 
-                                />
-                             ))}
+                          {/* Figure 1 Mockup */}
+                          <div className="my-2 p-2 border border-zinc-200 bg-zinc-50">
+                             <div className="h-16 w-full bg-zinc-100 relative overflow-hidden flex items-end justify-between px-2 pb-1 gap-1">
+                                <div className="h-4/5 w-2 bg-blue-500/80"></div>
+                                <div className="h-3/5 w-2 bg-blue-500/80"></div>
+                                <div className="h-full w-2 bg-blue-500/80"></div>
+                                <div className="h-1/2 w-2 bg-blue-500/80"></div>
+                                <div className="h-3/4 w-2 bg-blue-500/80"></div>
+                             </div>
+                             <div className="mt-1 text-[6px] text-center text-zinc-500 font-sans">
+                                Figure 1: Attention score distribution across layers.
+                             </div>
                           </div>
+
+                          <p>
+                             Our approach builds upon these foundations but introduces a dynamic sparsity pattern that adapts to the input sequence content. This allows the model to focus resources on the most relevant tokens.
+                          </p>
                        </div>
 
-                       <div className="space-y-2">
-                          <div className="space-y-1">
-                             {[1,2,3,4,5,6,7,8].map((_, i) => (
-                                <motion.div 
-                                   key={i}
-                                   initial={{ width: 0 }}
-                                   whileInView={{ width: "100%" }}
-                                   transition={{ delay: 0.7 + (i*0.05), duration: 0.4 }}
-                                   className="h-1.5 bg-zinc-300" 
-                                />
-                             ))}
-                          </div>
+                       <div className="space-y-4">
+                          <p>
+                             <strong>2. Methodology</strong><br/>
+                             We define the attention matrix A as a sparse matrix where only the top-k elements are retained. To efficiently compute this, we employ a locality-sensitive hashing (LSH) scheme that groups similar keys into buckets. Within each bucket, we apply standard attention.
+                          </p>
                           
-                          {/* Small Figure */}
-                          <motion.div 
-                             initial={{ opacity: 0 }}
-                             whileInView={{ opacity: 1 }}
-                             transition={{ delay: 1.2 }}
-                             className="h-16 bg-zinc-800 my-4" 
-                          />
-
-                           <div className="space-y-1">
-                             {[1,2,3,4].map((_, i) => (
-                                <motion.div 
-                                   key={i}
-                                   initial={{ width: 0 }}
-                                   whileInView={{ width: "100%" }}
-                                   transition={{ delay: 1.3 + (i*0.05), duration: 0.4 }}
-                                   className="h-1.5 bg-zinc-300" 
-                                />
-                             ))}
+                          <p>
+                             <strong>3. Experiments</strong><br/>
+                             We evaluate our model on the GLUE benchmark and compare it against BERT-base and DistilBERT. Table 1 summarizes our results.
+                          </p>
+                          
+                          {/* Table Mockup */}
+                          <div className="my-2 border-t border-b border-black py-1">
+                             <div className="grid grid-cols-3 font-bold mb-1 border-b border-zinc-300 pb-0.5">
+                                <span>Model</span> <span className="text-center">Acc.</span> <span className="text-right">Speed</span>
+                             </div>
+                             <div className="space-y-0.5">
+                                <div className="grid grid-cols-3">
+                                   <span>BERT</span> <span className="text-center">84.2</span> <span className="text-right">1.0x</span>
+                                </div>
+                                <div className="grid grid-cols-3 font-semibold">
+                                   <span>Ours</span> <span className="text-center">83.9</span> <span className="text-right">2.4x</span>
+                                </div>
+                             </div>
+                             <div className="mt-1 text-[6px] text-center text-zinc-500 font-sans pt-1">
+                                Table 1: Performance comparison on GLUE.
+                             </div>
                           </div>
+
+                          <p>
+                             Our method achieves comparable accuracy while delivering a 2.4x speedup in inference time. This makes it suitable for edge deployment on mobile devices.
+                          </p>
+                          
+                          <p>
+                             <strong>4. Conclusion</strong><br/>
+                             We theoretically and empirically demonstrate that sparse attention can approximate full attention with high fidelity. Future work includes extending this to vision transformers.
+                          </p>
                        </div>
                     </div>
                  </div>

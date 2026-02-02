@@ -103,8 +103,8 @@ export function Footer() {
         <div className="mt-16 border-t border-zinc-900/10 pt-8 sm:mt-20 lg:mt-24">
            {/* Big Wordmark Background Effect - Optional, from inspiration */}
            <div className="relative w-full overflow-hidden h-32 md:h-64 flex items-center justify-center opacity-[0.03] select-none pointer-events-none">
-              <span className="text-[12vw] font-sans font-bold text-black leading-none tracking-tighter whitespace-nowrap">
-                 ORIGIN LAB_
+              <span className="text-[12vw] font-instrument-serif font-bold text-black leading-none tracking-tighter whitespace-nowrap">
+                 ORIGIN LAB
               </span>
            </div>
            
