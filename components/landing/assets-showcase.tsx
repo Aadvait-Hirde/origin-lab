@@ -24,12 +24,12 @@ export function AssetsShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
            {[
-              { src: "/slides/slide-1.png", title: "Research Fundamentals" },
-              { src: "/slides/slide-2.png", title: "Literature Review" },
-              { src: "/slides/slide-3.png", title: "Methodology" },
-              { src: "/slides/slide-4.png", title: "Data Analysis" },
-              { src: "/slides/slide-5.png", title: "Results & Discussion" },
-              { src: "/slides/slide-6.png", title: "Academic Writing" },
+              { src: "/slides/slide-1.png", title: "Title" },
+              { src: "/slides/slide-2.png", title: "Introduction" },
+              { src: "/slides/slide-3.png", title: "Literature Review" },
+              { src: "/slides/slide-4.png", title: "Research Design" },
+              { src: "/slides/slide-5.png", title: "Results" },
+              { src: "/slides/slide-6.png", title: "References" },
            ].map((slide, i) => (
               <motion.div
                  key={i}
