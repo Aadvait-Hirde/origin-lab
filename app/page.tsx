@@ -10,6 +10,7 @@ import { Pricing } from '@/components/landing/pricing';
 import { ApplicationProcess } from '@/components/landing/application-process';
 import { FAQ } from '@/components/landing/faq';
 import { Footer } from '@/components/landing/footer';
+import { AssetsShowcase } from '@/components/landing/assets-showcase';
 
 export default function Home() {
   return (
@@ -31,19 +32,22 @@ export default function Home() {
       {/* SECTION 5: WHO YOU'LL WORK WITH (Credibility) */}
       <Team />
       
-      {/* SECTION 6: PROGRAM DETAILS (Logistics) */}
+      {/* SECTION 6: ASSETS (What you get) */}
+      <AssetsShowcase />
+
+      {/* SECTION 7: PROGRAM DETAILS (Logistics) */}
       <ProgramDetails />
       
-      {/* SECTION 7: OUTCOMES (What you get) */}
+      {/* SECTION 8: OUTCOMES (What you get) */}
       <Outcomes />
       
-      {/* SECTION 8: PRICING (Clear, upfront) */}
+      {/* SECTION 9: PRICING (Clear, upfront) */}
       <Pricing />
       
-      {/* SECTION 9: APPLICATION PROCESS (How to join) */}
+      {/* SECTION 10: APPLICATION PROCESS (How to join) */}
       <ApplicationProcess />
       
-      {/* SECTION 10: FAQ (Address objections) */}
+      {/* SECTION 11: FAQ (Address objections) */}
       <FAQ />
       
       <Footer />
