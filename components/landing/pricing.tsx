@@ -57,7 +57,7 @@ export function Pricing() {
                        "Conference Submission Fees",
                        "University Datasets & Compute"
                     ].map((feature) => (
-                       <li key={feature} className="flex gap-3 text-sm text-zinc-600 tracking-tight items-start">
+                       <li key={feature} className="flex gap-3 text-sm text-zinc-600 tracking-tight items-center">
                           <CheckIcon className="w-5 h-5 text-zinc-900 shrink-0" />
                           {feature}
                        </li>
