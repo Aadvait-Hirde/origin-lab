@@ -24,6 +24,9 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Origin Lab",
   description: "Publish your first AI research paper in 12 weeks.",
+  icons: {
+    icon: "/logos/ol-w-d.png",
+  },
 };
 
 export default function RootLayout({

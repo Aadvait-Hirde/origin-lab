@@ -6,14 +6,14 @@ const mentors = [
   {
     name: "Aadvait Hirde",
     role: "Program Director",
-    bio: "Junior at IU, National Director of Kappa Theta Pi, Research Assistant on $32M NSF grant.",
-    image: "/avatars/aadvait.png" // Placeholder, handle if missing
+    bio: "Junior at IU, National Director of Kappa Theta Pi, Research Assistant on $1.5M NSF grant.",
+    image: "/assets/sf-dp.png" // Placeholder, handle if missing
   },
   {
-    name: "PhD Researchers",
+    name: "Dr. Sagar Samtani",
     role: "Mentors from IU Data Science Lab",
     bio: "Experts in Computer Vision, NLP, and Deep Learning with publications in NeurIPS, CVPR, and ICML.",
-    image: "/avatars/placeholder.png" // Abstract placeholder
+    image: "/assets/sagar.png" // Abstract placeholder
   }
 ];
 
@@ -36,13 +36,18 @@ export function Team() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
            {/* Primary Mentor Card */}
            <div className="group border border-zinc-200 bg-white p-6 md:p-8 hover:border-zinc-300 transition-colors">
-              <div className="w-16 h-16 bg-zinc-100 mb-6 overflow-hidden relative grayscale">
-                 {/* Visual Placeholder if image fails */}
-                 <div className="absolute inset-0 flex items-center justify-center text-zinc-400 font-serif italic">AH</div>
+              <div className="w-16 h-16 bg-zinc-100 mb-6 overflow-hidden relative">
+                 <Image 
+                    src={mentors[0].image} 
+                    alt={mentors[0].name}
+                    width={2400} 
+                    height={2400}
+                    className="w-full h-full object-cover scale-[1.2]"
+                 />
               </div>
               <h3 className="text-xl font-medium text-zinc-900 mb-1 font-instrument-serif tracking-tight">Aadvait Hirde</h3>
               <p className="text-xs font-medium text-zinc-500 uppercase tracking-tight mb-4">Program Director</p>
-              <p className="text-sm text-zinc-600 leading-relaxed">
+              <p className="text-sm text-zinc-600 leading-relaxed tracking-tight">
                 Junior at Indiana University, National Director of Kappa Theta Pi, Research Assistant on $1.5M NSF grant.
               </p>
            </div>
@@ -50,16 +55,18 @@ export function Team() {
            {/* Generic Mentor Group Card */}
            <div className="group border border-zinc-200 bg-white p-6 md:p-8 hover:border-zinc-300 transition-colors">
                <div className="w-16 h-16 bg-zinc-100 mb-6 overflow-hidden relative flex items-center justify-center">
-                   <div className="flex -space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-zinc-300 border-2 border-white" />
-                      <div className="w-8 h-8 rounded-full bg-zinc-400 border-2 border-white" />
-                      <div className="w-8 h-8 rounded-full bg-zinc-500 border-2 border-white" />
-                   </div>
+                   <Image 
+                    src={mentors[1].image} 
+                    alt={mentors[1].name}
+                    width={2400} 
+                    height={2400}
+                    className="w-full h-full object-cover"
+                 />
                </div>
-              <h3 className="text-xl font-medium text-zinc-900 mb-1 font-instrument-serif">IU PhD Researchers</h3>
-              <p className="text-xs font-medium text-zinc-500 uppercase tracking-tight mb-4">Lead Mentors</p>
+              <h3 className="text-xl font-medium text-zinc-900 mb-1 font-instrument-serif">Dr. Sagar Samtani</h3>
+              <p className="text-xs font-medium text-zinc-500 uppercase tracking-tight mb-4">Lead Mentor</p>
               <p className="text-sm text-zinc-600 leading-relaxed tracking-tight">
-                3-4 PhD students from the IU Data Science Lab. 1:10 mentor-to-student ratio ensuring personalized guidance.
+                Dr. Samtani, along with 3-4 PhD students from the Data Science and AI Lab. 1:10 mentor-to-student ratio ensuring personalized guidance.
               </p>
            </div>
 
