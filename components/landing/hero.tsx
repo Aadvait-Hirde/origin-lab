@@ -39,7 +39,7 @@ export function Hero() {
                 }}
               >
                 <ShinyText
-                  text="Applications for Summer 2026 Open March 1st"
+                  text="Early Application Open Until March 1st"
                   className="text-xs font-medium tracking-tight uppercase whitespace-nowrap"
                   color="#4a4a4a"
                   shineColor="#a1a1a1"
@@ -79,6 +79,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 className="rounded-none px-8 h-12 text-base font-medium shadow-sm transition-all hover:scale-105 active:scale-95 duration-300 tracking-tighter"
+                onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")}
               >
                 Apply for Summer 2026
                 <ArrowRightIcon className="ml-2 w-4 h-4" />
