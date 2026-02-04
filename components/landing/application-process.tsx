@@ -43,12 +43,16 @@ export function ApplicationProcess() {
         </div>
 
         <div className="bg-zinc-900 text-white p-8 md:p-12 text-center">
-            <h3 className="text-2xl font-light font-instrument-serif mb-4">Applications open March 1, 2026</h3>
+            <h3 className="text-2xl font-light font-instrument-serif mb-4">Early Application Open Until March 1st</h3>
             <p className="text-zinc-400 mb-8 max-w-xl mx-auto tracking-tight">
                40-50 spots. Selective admissions. If you're ready to do real research this summer, apply.
             </p>
-            <Button size="lg" className="rounded-none px-8 h-12 bg-white text-zinc-900 hover:bg-zinc-100">
-               Join Waitlist
+            <Button 
+               size="lg" 
+               className="rounded-none px-8 h-12 bg-white text-zinc-900 hover:bg-zinc-100"
+               onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")}
+            >
+               Apply Now
             </Button>
         </div>
 

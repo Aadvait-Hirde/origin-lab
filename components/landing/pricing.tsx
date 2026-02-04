@@ -68,7 +68,7 @@ export function Pricing() {
                     <Button 
                       size="lg"
                       className="w-full rounded-none h-12 text-base font-medium transition-all hover:scale-[1.02]"
-                      onClick={() => {}}
+                      onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")}
                     >
                       Apply Now
                     </Button>

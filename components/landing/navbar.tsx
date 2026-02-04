@@ -5,12 +5,6 @@ import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
 import { ListIcon, XIcon } from '@phosphor-icons/react';
 
 const navLinks = [
@@ -24,7 +18,7 @@ const navLinks = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,7 +135,7 @@ export function Navbar() {
               
               <div className="hidden md:block">
                  <Button 
-                    onClick={() => setIsWaitlistOpen(true)} 
+                    onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")} 
                     size="default" 
                     className={cn(
                       "rounded-none h-10 px-4 text-sm bg-white/40 backdrop-blur-md border border-gray-200/50 text-foreground/70 hover:text-foreground hover:bg-white/60 transition-all tracking-tight",
@@ -176,8 +170,8 @@ export function Navbar() {
                   <Button
                     className="w-full"
                     onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsWaitlistOpen(true);
+                        setIsMobileMenuOpen(false);
+                        window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank");
                     }}
                   >
                     Apply Now
@@ -188,30 +182,6 @@ export function Navbar() {
           )}
         </nav>
       </header>
-
-      {/* Waitlist Dialog */}
-      <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Applications Open March 1st</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-             <p className="text-sm text-muted-foreground">
-                Origin Lab applications for the Summer 2026 cohort will open on March 1, 2026.
-                Sign up below to get notified when applications go live.
-             </p>
-             {/* Placeholder for email form */}
-             <div className="flex gap-2">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="flex-1 px-3 py-2 border rounded-none text-sm"
-                />
-                <Button>Notify Me</Button>
-             </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </>
   );
 }

@@ -88,7 +88,7 @@ export function Footer() {
                       </li>
                    ))}
                    <li>
-                      <a href="#" className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
+                      <a href="https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
                          Apply Now
                       </a>
                    </li>
