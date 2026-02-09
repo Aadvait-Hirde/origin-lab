@@ -8,9 +8,9 @@ import { Button } from '@/components/ui/button';
 import { ListIcon, XIcon } from '@phosphor-icons/react';
 
 const navLinks = [
-  { href: '#program-details', label: 'Program' },
   { href: '#curriculum', label: 'Curriculum' },
   { href: '#research', label: 'Research Areas' },
+  { href: '#program-details', label: 'Program' },
   { href: '#pricing', label: 'Tuition' },
   { href: '#faq', label: 'FAQ' },
 ];

@@ -9,28 +9,28 @@ import {
 
 const faqs = [
   {
-    question: "I don't know ML yet. Can I apply?",
-    answer: "You need basic Python proficiency and familiarity with ML concepts. We are not teaching introductory programming. If you can write a script to process data, you're likely ready.",
+    question: "I don't know ML yet. Can I still apply?",
+    answer: "We recommend having a foundational understanding of Python and some familiarity with machine learning concepts. While we don't teach introductory programming, our mentors are here to guide you through the complexities of research and advanced modeling.",
   },
   {
-    question: "Do I need to be in the US?",
-    answer: "No. The program is fully remote and international students are welcome.",
+    question: "Do I need to be located in the US to participate?",
+    answer: "Not at all! Origin Lab is a fully remote, global program. We welcome ambitious students from all over the world to join our community of researchers.",
   },
   {
-    question: "Will this help me get into college?",
-    answer: "Published research is one of the strongest signals for competitive universities. However, our goal is to teach you real research skills; the college application benefit is a secondary outcome.",
+    question: "Will this program help with my college applications?",
+    answer: "Absolutely. Publishing independent research is a powerful way to demonstrate intellectual curiosity and rigorous academic capability to admissions officers. Beyond the application, you'll gain critical thinking skills that will serve you throughout your academic career.",
   },
   {
-    question: "What if my paper doesn't get accepted?",
-    answer: "Target acceptance rate is 35-50%, which is typical for the conferences we submit to. Even if rejected, you will have a completed research paper for your portfolio and the experience of going through the peer review process.",
+    question: "What happens if my paper doesn't get accepted?",
+    answer: "Rejection is a natural part of the scientific process! We target competitive conferences with a 35-50% acceptance rate. Regardless of the outcome, you will walk away with a complete, high-quality research paper for your portfolio and the invaluable experience of navigating the peer review system.",
   },
   {
-    question: "How much time per week?",
-    answer: "10-15 hours. This is an intensive program. If you cannot commit to this workload, please do not apply.",
+    question: "What is the weekly time commitment?",
+    answer: "We suggest budgeting about 15 hours per week to get the most out of the program. This immersive experience is designed to be rigorous, but our mentors and community are here to support you every step of the way.",
   },
   {
-    question: "Can I propose my own project?",
-    answer: "Yes, provided it is feasible within the 12-week timeframe and applies AI/ML in a meaningful way.",
+    question: "Can I bring my own research project?",
+    answer: "We love student initiative! You are more than welcome to propose your own research questions, provided they are feasible within the 12-week timeline and effectively utilize AI/ML methodologies.",
   }
 ];
 

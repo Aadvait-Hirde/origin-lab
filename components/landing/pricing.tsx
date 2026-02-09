@@ -29,7 +29,7 @@ export function Pricing() {
                     Summer 2026 Cohort
                   </h3>
                   <p className="text-zinc-500 text-sm mb-8 tracking-tight">
-                    June 15 - September 1, 2026
+                    June 1 - August 31, 2026
                   </p>
 
                   <div className="space-y-1 mb-2">
@@ -55,7 +55,7 @@ export function Pricing() {
                        "1:1 Research Mentorship",
                        "Guaranteed Publication Support",
                        "Conference Submission Fees",
-                       "University Datasets & Compute"
+                       "Datasets & Compute Funds"
                     ].map((feature) => (
                        <li key={feature} className="flex gap-3 text-sm text-zinc-600 tracking-tight items-center">
                           <CheckIcon className="w-5 h-5 text-zinc-900 shrink-0" />
@@ -73,7 +73,7 @@ export function Pricing() {
                       Apply Now
                     </Button>
                     <p className="text-xs text-center text-zinc-500 tracking-tight">
-                       Financial aid available ($800 - $1,500 sliding scale).
+                       Financial aid available (separate application after acceptance).
                     </p>
                  </div>
               </CardContent>

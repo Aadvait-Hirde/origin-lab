@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { TwitterLogo, LinkedinLogo, EnvelopeSimple } from "@phosphor-icons/react";
+import { TwitterLogo, LinkedinLogo, EnvelopeSimple, InstagramLogo } from "@phosphor-icons/react";
 
 const navigation = {
   main: [
@@ -15,17 +15,22 @@ const navigation = {
   social: [
     {
       name: "Twitter",
-      href: "#",
+      href: "https://x.com/originlbt",
       icon: (props: any) => <TwitterLogo weight="fill" {...props} />,
     },
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/origin-laboratory",
       icon: (props: any) => <LinkedinLogo weight="fill" {...props} />,
     },
     {
+      name: "Instagram",
+      href: "https://www.instagram.com/originlaboratory/",
+      icon: (props: any) => <InstagramLogo weight="fill" {...props} />,
+    },
+    {
       name: "Email",
-      href: "mailto:hello@originlab.org",
+      href: "mailto:aadvait@originlab.dev",
       icon: (props: any) => <EnvelopeSimple weight="fill" {...props} />,
     },
   ],
@@ -51,7 +56,7 @@ export function Footer() {
                   unoptimized
                 />
              </Link>
-            <p className="text-sm leading-6 text-zinc-600 max-w-xs">
+            <p className="text-sm leading-6 tracking-tight text-zinc-600 max-w-xs">
               Empowering the next generation of researchers to solve the world&apos;s most pressing problems.
             </p>
             <div className="flex space-x-6">

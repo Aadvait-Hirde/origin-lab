@@ -2,43 +2,44 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { ProgramCalendar } from "./program-calendar";
 
 const timeline = [
   {
     step: "01",
     weeks: "Weeks 1-2",
     phase: "Foundations",
-    description: "Master research methodology, conduct literature review, and form your team.",
+    description: "Master research basics, form teams, and finalize your research question.",
   },
   {
     step: "02",
     weeks: "Weeks 3-4",
     phase: "Design",
-    description: "Scope a novel research question and design experiments with mentor guidance.",
+    description: "Design experiments, set up tools, and present your research proposal.",
   },
   {
     step: "03",
     weeks: "Weeks 5-8",
     phase: "Execution",
-    description: "Run experiments, collect data, and iterate on your findings weekly.",
+    description: "Run experiments, collect data, and iterate with weekly professor guidance.",
   },
   {
     step: "04",
-    weeks: "Weeks 9-10",
-    phase: "Writing",
-    description: "Draft your paper using academic standards. Revise with peer and mentor feedback.",
+    weeks: "Weeks 9-11",
+    phase: "Analysis & Writing",
+    description: "Finalize results, write your paper draft, and prepare for submission.",
   },
   {
     step: "05",
-    weeks: "Weeks 11-12",
+    weeks: "Week 12",
     phase: "Publication",
-    description: "Finalize your manuscript, format for checking, and submit to a conference.",
+    description: "Polish your manuscript, present your work, and submit to conferences.",
   }
 ];
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-32 bg-background border-t border-border relative">
+    <section id="curriculum" className="py-24 md:py-32 bg-background border-t border-border relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         <div className="mb-20 max-w-2xl">
@@ -59,7 +60,7 @@ export function HowItWorks() {
         </div>
 
         {/* Horizontal Grid Timeline */}
-        <div className="border border-zinc-200 border-r-0 border-b-0">
+        <div className="border border-zinc-200 border-r-0 border-b-0 mb-32">
           <div className="grid grid-cols-1 md:grid-cols-5">
             {timeline.map((item, i) => (
               <motion.div 
@@ -81,7 +82,7 @@ export function HowItWorks() {
                           {item.step}
                         </span>
                       </div>
-                      <h3 className="text-3xl font-instrument-serif text-zinc-900 mb-4 tracking-tight group-hover:translate-x-1 transition-transform duration-300">
+                      <h3 className="text-2xl lg:text-3xl font-instrument-serif text-zinc-900 mb-4 tracking-tight group-hover:translate-x-1 transition-transform duration-300">
                         {item.phase}
                       </h3>
                       <p className="text-sm text-zinc-500 tracking-tight leading-relaxed group-hover:text-zinc-700 transition-colors">
@@ -94,7 +95,14 @@ export function HowItWorks() {
           </div>
         </div>
 
+        {/* Detailed Calendar View */}
+        <div className="mt-24">
+             <ProgramCalendar />
+        </div>
+
       </div>
     </section>
   );
 }
+
+

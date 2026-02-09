@@ -53,7 +53,8 @@ export function ResearchDomains() {
 
   return (
     <>
-    <section ref={containerRef} id="research" className="relative h-[400vh] bg-white hidden lg:block">
+    <div id="research">
+    <section ref={containerRef} className="relative h-[400vh] bg-white hidden lg:block">
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col">
         
         {/* Header */}
@@ -131,6 +132,7 @@ export function ResearchDomains() {
           ))}
        </div>
     </section>
+    </div>
     </>
   );
 }

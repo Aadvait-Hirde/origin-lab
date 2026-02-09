@@ -11,6 +11,7 @@ import { ApplicationProcess } from '@/components/landing/application-process';
 import { FAQ } from '@/components/landing/faq';
 import { Footer } from '@/components/landing/footer';
 import { AssetsShowcase } from '@/components/landing/assets-showcase';
+import { ProjectBank } from '@/components/landing/project-bank';
 
 export default function Home() {
   return (
@@ -34,8 +35,11 @@ export default function Home() {
       
       {/* SECTION 6: ASSETS (What you get) */}
       <AssetsShowcase />
+      
+      {/* SECTION 7: PROJECT BANK */}
+      <ProjectBank />
 
-      {/* SECTION 7: PROGRAM DETAILS (Logistics) */}
+      {/* SECTION 8: PROGRAM DETAILS (Logistics) */}
       <ProgramDetails />
       
       {/* SECTION 8: OUTCOMES (What you get) */}
