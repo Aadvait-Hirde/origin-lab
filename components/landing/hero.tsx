@@ -39,7 +39,7 @@ export function Hero() {
                 }}
               >
                 <ShinyText
-                  text="Early Application Open Until March 1st"
+                  text="Early Application Open Until April 15th"
                   className="text-xs font-medium tracking-tight uppercase whitespace-nowrap"
                   color="#4a4a4a"
                   shineColor="#a1a1a1"
