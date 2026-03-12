@@ -4,24 +4,24 @@ import Image from "next/image";
 
 const team = [
   {
-    name: "[PROFESSOR 1]",
-    role: "[SPECIALIZATION]",
-    bio: "[BIO]",
-    image: "",
-    hasImage: false
-  },
-  {
-    name: "[PROFESSOR 2]",
-    role: "[SPECIALIZATION]",
-    bio: "[BIO]",
-    image: "",
-    hasImage: false
+    name: "Yang Gao",
+    role: "PhD Mentor",
+    bio: "Yang is a PhD student with cybersecurity research published in ACM DTRAP, IEEE S&P HMISA, and HICSS.",
+    image: "/assets/yang.png",
+    hasImage: true
   },
     {
     name: "Aadvait Hirde",
     role: "Program Director",
-    bio: "Junior at IU, National Director of Kappa Theta Pi, Research Assistant on $1.5M NSF grant.",
+    bio: "Aadvait is a Research Assistant on the NSF SAFE-OSE project and has published multiple AI/ML papers in IEEE.",
     image: "/assets/aadvait.png",
+    hasImage: true
+  },
+  {
+    name: "Chengjun (Raina) Zhang",
+    role: "PhD Mentor",
+    bio: "Raina is a PhD student at IU researching ML and NLP methods for cybersecurity, with work on diachronic embeddings, LLMs, and more.",
+    image: "/assets/raina.png",
     hasImage: true
   },
   {
@@ -31,7 +31,7 @@ const team = [
     image: "",
     hasImage: false
   },
-  {
+    {
     name: "[PROFESSOR 4]",
     role: "[SPECIALIZATION]",
     bio: "[BIO]",
@@ -56,25 +56,32 @@ export function Team() {
            </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1">
+        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
            {team.map((member, i) => (
-             <div key={i} className="group border border-zinc-200 bg-white p-6 md:p-8 hover:border-zinc-300 transition-colors">
-                <div className="w-16 h-16 bg-zinc-100 mb-6 overflow-hidden relative flex items-center justify-center">
-                   {member.hasImage ? (
-                        <Image 
-                            src={member.image} 
-                            alt={member.name}
-                            width={2400} 
-                            height={2400}
-                            className="w-full h-full object-cover scale-[1.2]" 
-                        />
-                   ) : (
-                        <div className="w-full h-full bg-zinc-200" />
-                   )}
+             <div 
+               key={i} 
+               className="group border border-zinc-200 bg-white p-6 md:p-8 hover:border-zinc-300 transition-colors w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] flex flex-col"
+             >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 shrink-0 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                     {member.hasImage ? (
+                          <Image 
+                              src={member.image} 
+                              alt={member.name}
+                              width={2400} 
+                              height={2400}
+                              className="w-full h-full object-cover" 
+                          />
+                     ) : (
+                          <div className="w-full h-full bg-zinc-200" />
+                     )}
+                  </div>
+                  <div>
+                    <h3 className="text-lg md:text-xl font-medium text-zinc-900 mb-1 font-instrument-serif tracking-tight">{member.name}</h3>
+                    <p className="text-xs font-medium text-zinc-500 uppercase tracking-tight">{member.role}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-medium text-zinc-900 mb-1 font-instrument-serif tracking-tight">{member.name}</h3>
-                <p className="text-xs font-medium text-zinc-500 uppercase tracking-tight mb-4">{member.role}</p>
-                <p className="text-sm text-zinc-600 leading-relaxed tracking-tight">
+                <p className="text-sm text-zinc-600 leading-relaxed tracking-tight text-justify md:text-left break-words">
                   {member.bio}
                 </p>
              </div>
