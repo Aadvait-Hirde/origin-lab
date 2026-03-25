@@ -24,20 +24,6 @@ const team = [
     image: "/assets/raina.png",
     hasImage: true
   },
-  {
-    name: "[PROFESSOR 3]",
-    role: "[SPECIALIZATION]",
-    bio: "[BIO]",
-    image: "",
-    hasImage: false
-  },
-    {
-    name: "[PROFESSOR 4]",
-    role: "[SPECIALIZATION]",
-    bio: "[BIO]",
-    image: "",
-    hasImage: false
-  },
 ];
 
 export function Team() {
