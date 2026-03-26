@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
 import "./globals.css";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
       >
@@ -60,6 +62,7 @@ export default function RootLayout({
           }}
         />
       </body>
+      <Analytics/>
     </html>
   );
 }
