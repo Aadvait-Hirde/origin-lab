@@ -39,7 +39,7 @@ export function Hero() {
                 }}
               >
                 <ShinyText
-                  text="Early Application Open Until April 15th"
+                  text="Applications Due May 25th, 11:59 PM EDT"
                   className="text-xs font-medium tracking-tight uppercase whitespace-nowrap"
                   color="#4a4a4a"
                   shineColor="#a1a1a1"

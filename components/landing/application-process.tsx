@@ -43,7 +43,7 @@ export function ApplicationProcess() {
         </div>
 
         <div className="bg-zinc-900 text-white p-8 md:p-12 text-center">
-            <h3 className="text-2xl font-light font-instrument-serif mb-4">Early Application Open Until April 15th</h3>
+            <h3 className="text-2xl font-light font-instrument-serif mb-4">Applications Open Until May 25th</h3>
             <p className="text-zinc-400 mb-8 max-w-xl mx-auto tracking-tight">
                60 spots. If you're ready to do real research this summer, apply.
             </p>

@@ -178,11 +178,11 @@ export function Navbar() {
       <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Applications Open April 15th</DialogTitle>
+            <DialogTitle>Applications Due May 25th</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
              <p className="text-sm text-muted-foreground">
-                Origin Lab applications for the Summer 2026 cohort will open on April 15, 2026.
+                Origin Lab applications for the Summer 2026 cohort are due May 25, 2026 at 11:59 PM EDT.
                 Sign up below to get notified when applications go live.
              </p>
              {/* Placeholder for email form */}
