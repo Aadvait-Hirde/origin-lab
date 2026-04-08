@@ -42,6 +42,21 @@ export function Intro() {
                     Origin Lab is different. Over 12 weeks this summer, you&apos;ll work in a small team to design and execute an AI/ML research project in a field <span className="text-zinc-900 font-medium">YOU</span> care about. By the end, you&apos;ll have a completed paper submitted to peer-reviewed conferences.
                   </p>
                </div>
+
+               {/* CTA Buttons - moved from hero */}
+               <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                  <button 
+                    className="px-8 h-12 text-base font-medium shadow-sm transition-all hover:scale-105 active:scale-95 duration-300 tracking-tighter bg-zinc-900 text-white hover:bg-zinc-800"
+                    onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")}
+                  >
+                    Apply for Summer 2026 →
+                  </button>
+                  <button 
+                    className="px-8 h-12 text-base font-medium shadow-sm transition-all hover:scale-105 active:scale-95 duration-300 tracking-tighter border border-zinc-200 text-zinc-700 hover:bg-zinc-50"
+                  >
+                    View Curriculum
+                  </button>
+               </div>
             </div>
 
             {/* Right Visual - Carousel */}

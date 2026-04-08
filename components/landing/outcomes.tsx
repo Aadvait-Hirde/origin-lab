@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CheckIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
@@ -13,8 +14,19 @@ const outcomes = [
 
 export function Outcomes() {
   return (
-    <section id="outcomes" className="py-24 bg-zinc-900 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="outcomes" className="relative py-24 text-white overflow-hidden">
+      {/* NASA Background */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/nasa-5.jpg"
+          alt="Artemis Mission - Earth from space"
+          fill
+          className="object-cover opacity-100"
+        />
+        <div className="absolute inset-0 bg-zinc-900/80" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
            
            <div>

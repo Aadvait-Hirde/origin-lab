@@ -38,17 +38,29 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="relative bg-black overflow-hidden" aria-labelledby="footer-heading">
+      {/* NASA Background */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/nasa-2.jpg"
+          alt="Artemis Mission - Moon and Earth"
+          fill
+          className="object-cover opacity-80"
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/50" />
+      </div>
+
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
              <Link href="/" className="block">
                 <span className="sr-only">Origin Lab</span>
                 <Image
-                  src="/logos/ol-w-d.png"
+                  src="/logos/ol-w-l.png"
                   alt="Origin Lab"
                   width={150}
                   height={40}
@@ -56,12 +68,12 @@ export function Footer() {
                   unoptimized
                 />
              </Link>
-            <p className="text-sm leading-6 tracking-tight text-zinc-600 max-w-xs">
+            <p className="text-sm leading-6 tracking-tight text-zinc-400 max-w-xs">
               Empowering the next generation of researchers to solve the world&apos;s most pressing problems.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-zinc-400 hover:text-zinc-500">
+                <a key={item.name} href={item.href} className="text-zinc-500 hover:text-zinc-300 transition-colors">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
@@ -71,11 +83,11 @@ export function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-zinc-900">Program</h3>
+                <h3 className="text-sm font-semibold leading-6 text-zinc-200">Program</h3>
                 <ul role="list" className="mt-6 space-y-4">
                    {navigation.main.slice(0, 3).map((item) => (
                       <li key={item.name}>
-                         <a href={item.href} className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
+                         <a href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
                             {item.name}
                          </a>
                       </li>
@@ -83,17 +95,17 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-zinc-900">Admissions</h3>
+                <h3 className="text-sm font-semibold leading-6 text-zinc-200">Admissions</h3>
                 <ul role="list" className="mt-6 space-y-4">
                    {navigation.main.slice(3).map((item) => (
                       <li key={item.name}>
-                         <a href={item.href} className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
+                         <a href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
                             {item.name}
                          </a>
                       </li>
                    ))}
                    <li>
-                      <a href="https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
+                      <a href="https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
                          Apply Now
                       </a>
                    </li>
@@ -105,17 +117,22 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-zinc-900/10 pt-8 sm:mt-20 lg:mt-24">
-           {/* Big Wordmark Background Effect - Optional, from inspiration */}
-           <div className="relative w-full overflow-hidden h-32 md:h-64 flex items-center justify-center opacity-[0.03] select-none pointer-events-none">
-              <span className="text-[12vw] font-instrument-serif font-bold text-black leading-none tracking-tighter whitespace-nowrap">
+        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+           {/* Big Wordmark Background Effect */}
+           <div className="relative w-full overflow-hidden h-32 md:h-64 flex items-center justify-center opacity-[0.2] select-none pointer-events-none">
+              <span className="text-[12vw] font-instrument-serif font-bold text-white leading-none tracking-tighter whitespace-nowrap">
                  ORIGIN LAB
               </span>
            </div>
            
-           <p className="text-xs leading-5 text-zinc-500 text-center mt-8">
-            &copy; 2026 Origin Lab. All rights reserved.
-          </p>
+           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+             <p className="text-xs leading-5 text-zinc-500">
+              &copy; 2026 Origin Lab. All rights reserved.
+             </p>
+             <p className="text-[10px] text-zinc-600 tracking-wider uppercase">
+               Images: NASA / Artemis II Mission
+             </p>
+           </div>
         </div>
       </div>
     </footer>

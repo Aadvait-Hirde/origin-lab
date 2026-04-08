@@ -17,6 +17,7 @@ const navLinks = [
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 
@@ -26,6 +27,7 @@ export function Navbar() {
         const next = window.scrollY > 10;
         return prev === next ? prev : next;
       });
+      setIsPastHero(window.scrollY > window.innerHeight * 0.7);
     };
 
     handleScroll();
@@ -75,7 +77,10 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 py-5 px-6 lg:px-8">
+      <header className={cn(
+        "fixed top-0 left-0 right-0 z-50 py-5 px-6 lg:px-8 transition-all duration-500",
+        isPastHero ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+      )}>
         <nav className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between relative">
             {/* Logo */}

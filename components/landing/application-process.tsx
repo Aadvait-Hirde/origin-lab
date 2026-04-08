@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export function ApplicationProcess() {
@@ -42,18 +43,32 @@ export function ApplicationProcess() {
            </div>
         </div>
 
-        <div className="bg-zinc-900 text-white p-8 md:p-12 text-center">
-            <h3 className="text-2xl font-light font-instrument-serif mb-4">Applications Open Until May 25th</h3>
-            <p className="text-zinc-400 mb-8 max-w-xl mx-auto tracking-tight">
-               60 spots. If you're ready to do real research this summer, apply.
-            </p>
-            <Button 
-               size="lg" 
-               className="rounded-none px-8 h-12 bg-white text-zinc-900 hover:bg-zinc-100"
-               onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")}
-            >
-               Apply Now
-            </Button>
+        <div className="relative text-white p-8 md:p-16 text-center overflow-hidden">
+            {/* NASA Background */}
+            <div className="absolute inset-0">
+              <Image
+                src="/assets/nasa-4.jpg"
+                alt="Artemis Mission - Earth through spacecraft window"
+                fill
+                className="object-cover"
+                quality={90}
+              />
+              <div className="absolute inset-0 bg-black/60" />
+            </div>
+
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-light font-instrument-serif mb-4">Applications Open Until May 25th</h3>
+              <p className="text-zinc-300 mb-8 max-w-xl mx-auto tracking-tight">
+                 60 spots. If you're ready to do real research this summer, apply.
+              </p>
+              <Button 
+                 size="lg" 
+                 className="rounded-none px-8 h-12 bg-white text-zinc-900 hover:bg-zinc-100"
+                 onClick={() => window.open("https://airtable.com/applefttOQAtaZ7wa/paggfdS3QhArLUQxt/form", "_blank")}
+              >
+                 Apply Now
+              </Button>
+            </div>
         </div>
 
       </div>
